@@ -1,26 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor () {
+    super()
+
+    this.state = {
+      arr: ['Oculus Quest 2', 'PlayStation 5', 'XBox Series X', 'XBox Series S', 'Nintendo Switch']
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h2>{ this.state.arr[0] }</h2>
+        <h2>{ this.state.arr[1] }</h2>
+        <h2>{ this.state.arr[2] }</h2>
+        <h2>{ this.state.arr[3] }</h2>
+        <h2>{ this.state.arr[4] }</h2>
+      </div>
+    );
+  }
 }
 
 export default App;
